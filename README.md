@@ -72,3 +72,44 @@ const client = createClient({
   autoResubscribe: true, // Whether to automatically resubscribe to channels after reconnecting.
 });
 ```
+
+## Redis Client Events
+
+- **`connect`**
+
+  - **Description**: Triggered when the client successfully establishes a connection to the Redis server.
+
+- **`ready`**
+
+  - **Description**: Fired when the client is ready to accept commands and is fully connected to the Redis server.
+
+- **`reconnecting`**
+
+  - **Description**: Emitted when the client is attempting to reconnect to the Redis server after a disconnection.
+
+- **`end`**
+
+  - **Description**: Occurs when the client connection to the Redis server has ended, either due to closure or error.
+
+- **`error`**
+  - **Description**: Raised when an error occurs during interaction with the Redis server, providing error details.
+
+```bash
+const { createClient } = require('redis');
+const client = createClient();
+
+client.on("error", (err) => console.log("Redis Client Error", err));
+
+client.on("connect", () =>
+  console.log("Redis Client is connected successfully.")
+);
+
+client.on("ready", () => console.log("Redis Client is ready to use."));
+
+client.on("reconnecting", () => console.log("Redis Client is reconnecting."));
+
+client.on("end", () => console.log("Redis Client is ended."));
+
+// Connect to Redis server
+client.connect()
+```

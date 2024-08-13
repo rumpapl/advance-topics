@@ -38,7 +38,7 @@ A "tick" refers to one complete iteration of the event loop. During each tick, N
 
 **Output Example:**
 
-\`\`\`text
+```bash
 MICROTASK: nextTick() => No. 1
 MICROTASK: nextTick() => No. 2
 MICROTASK: Promise resolved => No. 1
@@ -50,7 +50,7 @@ I/O QUEUE: 1st task => File content: { data: 'test file reader.' }
 MICROTASK: after 1st I/O task
 I/O QUEUE: 2st task => Received data: { userId: 1, id: 1, title: 'delectus aut autem', completed: false }
 TIMER: with one second
-\`\`\`
+
 
 **Findings:**
 
@@ -60,3 +60,4 @@ TIMER: with one second
 
 2. **Why did I/O Task 2 run before Timer 3?**
    - Each tick takes a very short time to complete. In this example, when the first I/O task finished, the event loop checked the timer queue. However, since the third timer was not ready at that specific moment, the queue was empty. As a result, the event loop moved on and executed I/O Task 2. When Timer 3 was ready, it was then executed.
+```

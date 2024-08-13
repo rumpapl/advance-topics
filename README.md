@@ -59,6 +59,6 @@ TIMER: with one second
 2. **Why did I/O Task 2 run before Timer 3?**
    - Each tick takes a very short time to complete. In this example, when the first I/O task finished, the event loop checked the timer queue. However, since the third timer was not ready at that specific moment, the queue was empty. As a result, the event loop moved on and executed I/O Task 2. When Timer 3 was ready, it was then executed.
 
-```
+## Sources
 
-```
+[A Complete Visual Guide to Understanding the Node.js Event Loop](https://www.builder.io/blog/visual-guide-to-nodejs-event-loop)

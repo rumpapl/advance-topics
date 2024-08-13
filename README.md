@@ -1,4 +1,4 @@
-## Redis
+# Redis
 
 Redis is a versatile in-memory data structure store commonly used for various purposes. Its main use cases include:
 
@@ -8,7 +8,7 @@ Redis is a versatile in-memory data structure store commonly used for various pu
 
 3. **Message Broker**: Redis is often utilized as a message broker to facilitate communication between different parts of an application or between different applications. It supports Pub/Sub messaging and queues, enabling real-time data distribution and task management.
 
-# Redis Client Configuration Example
+# Redis Client Configuration
 
 This README provides an example of how to configure a Redis client using the `createClient` method from the `redis` package in Node.js.
 

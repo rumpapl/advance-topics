@@ -1,5 +1,3 @@
-# Advanced Topics
-
 ## What is Libuv?
 
 Libuv is a multi-platform library that handles asynchronous I/O operations in the Node.js runtime environment. It provides the underlying mechanism for Node.js's non-blocking I/O model, utilizing different queues to manage tasks with varying priorities.

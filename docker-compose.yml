@@ -1,0 +1,4 @@
+services:
+  event-loop:
+    build: ./app
+    command: ["node", "event-loop/index.js"]

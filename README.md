@@ -3,7 +3,7 @@
 1. **Clone the Repository:**
 
    - Download the repository to your local machine using:
-   - 
+   
      ```bash
      git clone <repository-url>
      ```

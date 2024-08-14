@@ -1,7 +1,5 @@
 # Advance-topics
 
-## Project Information
-
 **Topics:**
 
    - **[redis-pub-sub](https://github.com/rumpapl/advance-topics/tree/redis-pub-sub)**

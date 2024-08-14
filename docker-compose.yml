@@ -2,30 +2,46 @@ services:
   redis:
     image: redis:latest
     ports:
-      - "${REDIS_PORT}:${REDIS_PORT}"
-    environment:
-      - REDIS_DNS=redis://redis:6379
+      - 6379
 
   publisher:
-    build: ./app
+    # build: ./app
+    image: node:18
+    env_file:
+      - .env
+    working_dir: /app
+    volumes:
+      - "./app:/app"
+      - ./app/node_modules:/app/node_modules
     depends_on:
-      - ${REDIS_SERVICE}
-    environment:
-      - REDIS_DNS=redis://redis:6379
+      - redis
     command: ["node", "publisher.js"]
 
   subscriber1:
-    build: ./app
+    # build: ./app
+    image: node:18
+    env_file:
+      - .env
+    working_dir: /app
+    volumes:
+      - "./app:/app"
+      - ./app/node_modules:/app/node_modules
     depends_on:
-      - ${REDIS_SERVICE}
-    environment:
-      - REDIS_DNS=redis://redis:6379
+      - redis
     command: ["node", "subscriber1.js"]
 
   subscriber2:
-    build: ./app
+    # build: ./app
+    image: node:18
+    env_file:
+      - .env
+    working_dir: /app
+    volumes:
+      - "./app:/app"
+      - ./app/node_modules:/app/node_modules
     depends_on:
-      - ${REDIS_SERVICE}
-    environment:
-      - REDIS_DNS=redis://redis:6379
+      - redis
     command: ["node", "subscriber1.js"]
+
+volumes:
+  node_modules:

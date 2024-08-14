@@ -139,7 +139,11 @@ client.connect()
 ## Resources & Materials
 
 [Redis with node js -- oficial docs](https://redis.io/docs/latest/develop/connect/clients/nodejs/)
+
 [github: node-redis](https://github.com/redis/node-redis)
+
 [github: createClient configuration (node-redis)](https://github.com/redis/node-redis/blob/master/docs/client-configuration.md)
+
 [github: Pub/Sub with RedisClient (node-redis)](https://github.com/redis/node-redis/blob/master/docs/pub-sub.md)
+
 [github: v3 to v4 Migration Guide (node-redis)](https://github.com/redis/node-redis/blob/master/docs/v3-to-v4.md)

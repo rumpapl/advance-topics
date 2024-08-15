@@ -62,3 +62,5 @@ TIMER: with one second
 ## Sources
 
 [A Complete Visual Guide to Understanding the Node.js Event Loop](https://www.builder.io/blog/visual-guide-to-nodejs-event-loop)
+
+[Relationship between event loop,libuv and v8 engine](https://stackoverflow.com/questions/49811043/relationship-between-event-loop-libuv-and-v8-engine/68598834#68598834)

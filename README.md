@@ -2,7 +2,7 @@
 
 # Event Emitter
 
-## Sources $ Metarials
+## Sources & Metarials
 
 [Event-Emitter - Node.js v22.6.0 documentation](https://nodejs.org/docs/latest/api/events.html#class-eventemitter)
 

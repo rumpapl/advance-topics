@@ -44,7 +44,7 @@
 
 # Event Emitter
 
-1. **Short notes on eventEmitter**
+1. **Short notes:**
 
    ```javascript
    // Default import for EventEmitter class from the 'events' module

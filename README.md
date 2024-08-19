@@ -44,6 +44,8 @@
 
 # Event Emitter
 
+**Short notes on eventEmitter**
+
 ```javascript
 // Default import for EventEmitter class from the 'events' module
 const EventEmitter = require("events");

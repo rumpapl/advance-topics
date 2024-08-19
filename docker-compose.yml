@@ -1,0 +1,11 @@
+services:
+  app:
+    image: node
+    working_dir: /app
+    volumes:
+      - ./:/app
+      - ./node_modules:/app/node_modules
+    command: [node, ./src/index.js]
+
+volumes:
+  node_modules:

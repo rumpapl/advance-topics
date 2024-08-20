@@ -1,8 +1,9 @@
-up:
-	docker compose up --attach app
 
-clean:
+up: #: Start the development environment services in foreground mode
+	docker compose up
+
+clean: #: Bring down containers, remove all data
 	docker compose down --remove-orphans --volumes
 
-install:
+install: #: install deps
 	docker compose run --rm -ti --no-deps app npm install

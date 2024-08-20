@@ -1,1 +1,1 @@
-console.log("project setup ok");
+console.log("Initial Project Setup.");

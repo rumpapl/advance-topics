@@ -1,1 +1,1 @@
-console.log("project setup ok");
+require("./src/app");

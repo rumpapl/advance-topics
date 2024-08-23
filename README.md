@@ -11,10 +11,10 @@
 
 2. **Switch to the Branch:**
 
-   - Change to the `redis-cache` branch:
+   - Change to the `cron-with-bullmq` branch:
 
      ```bash
-     git checkout redis-cache
+     git checkout cron-with-bullmq
      ```
    - Rename the `.env.dist` as `.env`
      

@@ -55,9 +55,8 @@ const globalConcurrency = await queue.getGlobalConcurrency();
 ```
 
 ### Removing Jobs
+1. #### Drain Method:####
 
-<details>
-  <summary>Draining Methods</summary>
   - When the queue is drained, all jobs that are **waiting** or **delayed** are removed.
   - Jobs that are **active**, **waiting for children**, **completed**, or **failed** remain unaffected.
   - **Parent jobs** within the drained queue:
@@ -74,7 +73,7 @@ const globalConcurrency = await queue.getGlobalConcurrency();
   
   await queue.drain();
   ```
-</details>
+
 
 
 

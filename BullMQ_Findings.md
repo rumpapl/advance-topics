@@ -10,3 +10,19 @@
 - **Limit Retention by Count**: Specify a maximum number of jobs to keep, e.g., 1000 completed and 5000 failed jobs.
 - **Limit Retention by Age**: Use `age` (in seconds) to keep jobs for a specific duration, with an optional `count` to limit the total number of jobs.
 - **Lazy Removal**: Jobs are only removed when new jobs complete or fail, triggering the auto-removal process.
+
+```javascript
+await myQueue.add(
+  "test",
+  { foo: "bar" },
+  {
+    removeOnComplete: {
+      age: 3600, // keep up to 1 hour
+      count: 1000, // keep up to 1000 jobs
+    },
+    removeOnFail: {
+      age: 24 * 3600, // keep up to 24 hours
+    },
+  }
+);
+```

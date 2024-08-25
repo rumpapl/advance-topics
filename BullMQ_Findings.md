@@ -58,12 +58,12 @@ const globalConcurrency = await queue.getGlobalConcurrency();
 
 1. **Draining methods:**
 
-- When the queue is drained, all jobs that are **waiting** or **delayed** are removed.
-- Jobs that are **active**, **waiting for children**, **completed**, or **failed** remain unaffected.
-- **Parent jobs** within the drained queue:
+\- When the queue is drained, all jobs that are **waiting** or **delayed** are removed.
+\- Jobs that are **active**, **waiting for children**, **completed**, or **failed** remain unaffected.
+\- **Parent jobs** within the drained queue:
   - Stay in the `waiting-children` status if they have pending children.
   - Are removed if they do not have any pending children.
-- **Parent jobs** in different queues:
+\- **Parent jobs** in different queues:
   - Remain in `waiting-children` status if they have pending children in other queues.
   - Are moved to the `wait` status if they do not have pending children in other queues.
 

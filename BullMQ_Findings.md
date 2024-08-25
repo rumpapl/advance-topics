@@ -54,3 +54,26 @@ const globalConcurrency = await queue.getGlobalConcurrency();
 // When a concurrency level is chosen for workers, it will not override the global one; instead, it will be set as the maximum number of jobs that can be processed by a given worker in parallel, but never exceeding the global concurrency level.
 ```
 
+### Removing Jobs
+
+1. Draining methods:
+
+- When the queue is drained, all jobs that are **waiting** or **delayed** are removed.
+- Jobs that are **active**, **waiting for children**, **completed**, or **failed** remain unaffected.
+- **Parent jobs** within the drained queue:
+  - Stay in the `waiting-children` status if they have pending children.
+  - Are removed if they do not have any pending children.
+- **Parent jobs** in different queues:
+  - Remain in `waiting-children` status if they have pending children in other queues.
+  - Are moved to the `wait` status if they do not have pending children in other queues.
+
+```javascript
+import { Queue } from 'bullmq';
+
+const queue = new Queue('paint');
+
+await queue.drain();
+```
+
+
+

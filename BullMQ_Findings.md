@@ -65,6 +65,7 @@ const globalConcurrency = await queue.getGlobalConcurrency();
     - **Parent jobs** in different queues:
       - Remain in `waiting-children` status if they have pending children in other queues.
       - Are moved to the `wait` status if they do not have pending children in other queues.
+        
 
 
     ```javascript

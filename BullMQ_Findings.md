@@ -91,9 +91,9 @@ const globalConcurrency = await queue.getGlobalConcurrency();
    const queue = new Queue('paint');
    
    const deletedJobIds = await queue.clean(
-   60000, // 1 minute
+   60000, // 1 minute - grace period (jobs older than this are considered for removal)
    1000, // max number of jobs to clean
-   'paused',
+   'paused', // job state to clean
    );
    ```
       

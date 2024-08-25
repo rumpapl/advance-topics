@@ -57,34 +57,32 @@ const globalConcurrency = await queue.getGlobalConcurrency();
 ### Removing Jobs
 
 1. #### Drain Method: ####
-
-    - When the queue is drained, all jobs that are **waiting** or **delayed** are removed.
-    - Jobs that are **active**, **waiting for children**, **completed**, or **failed** remain unaffected.
-    - **Parent jobs** within the drained queue:
-      - Stay in the `waiting-children` status if they have pending children.
-      - Are removed if they do not have any pending children.
-    - **Parent jobs** in different queues:
-      - Remain in `waiting-children` status if they have pending children in other queues.
-      - Are moved to the `wait` status if they do not have pending children in other queues.
+  - When the queue is drained, all jobs that are **waiting** or **delayed** are removed.
+  - Jobs that are **active**, **waiting for children**, **completed**, or **failed** remain unaffected.
+  - **Parent jobs** within the drained queue:
+    - Stay in the `waiting-children` status if they have pending children.
+    - Are removed if they do not have any pending children.
+  - **Parent jobs** in different queues:
+    - Remain in `waiting-children` status if they have pending children in other queues.
+    - Are moved to the `wait` status if they do not have pending children in other queues.
         
-
-
-    ```javascript
-    import { Queue } from 'bullmq';
+  ```javascript
+  import { Queue } from 'bullmq';
     
-    const queue = new Queue('paint');
+  const queue = new Queue('paint');
     
-    await queue.drain();
-    ```
-2. #### Clean Methos: ###
+  await queue.drain();
+  ```
+
+3. #### Clean Methos: ###
+   
+   - **Grace Period (60000 ms / 1 minute):**
+     - Jobs older than this period will be considered for removal.
+   - **Max Number of Jobs (1000):**
+     - Maximum number of jobs to clean.
+   - **Job State ('paused'):**
+     - Only jobs in the 'paused' state will be cleaned.
      
-     - **Grace Period (60000 ms / 1 minute):**
-       - Jobs older than this period will be considered for removal.
-     - **Max Number of Jobs (1000):**
-       - Maximum number of jobs to clean.
-     - **Job State ('paused'):**
-       - Only jobs in the 'paused' state will be cleaned.
-
    ```javascript
    import { Queue } from 'bullmq';
    
@@ -97,7 +95,16 @@ const globalConcurrency = await queue.getGlobalConcurrency();
    );
    ```
 
-3. ### Obliterate Method: ###
+5. #### Obliterate Method: ####
+   - Completely obliterates a queue and all of its contents.
+  
+   ```javascript
+   import { Queue } from 'bullmq';
+   
+   const queue = new Queue('paint');
+   
+   await queue.obliterate();
+   ```
 
 
 

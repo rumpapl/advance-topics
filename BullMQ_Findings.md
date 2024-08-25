@@ -77,15 +77,13 @@ const globalConcurrency = await queue.getGlobalConcurrency();
     await queue.drain();
     ```
 2. #### Clean Methos: ###
+     
      - **Grace Period (60000 ms / 1 minute):**
-    - Jobs older than this period will be considered for removal.
-  
-  - **Max Number of Jobs (1000):**
-    - Maximum number of jobs to clean.
-  
-  - **Job State ('paused'):**
-    - Only jobs in the 'paused' state will be cleaned.
-
+       - Jobs older than this period will be considered for removal.
+     - **Max Number of Jobs (1000):**
+       - Maximum number of jobs to clean.
+     - **Job State ('paused'):**
+       - Only jobs in the 'paused' state will be cleaned.
 
    ```javascript
    import { Queue } from 'bullmq';

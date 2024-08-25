@@ -96,7 +96,8 @@ const globalConcurrency = await queue.getGlobalConcurrency();
    'paused', // job state to clean
    );
    ```
-      
+
+3. ### Obliterate Method: ###
 
 
 

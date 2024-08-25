@@ -58,52 +58,28 @@ const globalConcurrency = await queue.getGlobalConcurrency();
 
 <details>
   <summary>Draining Methods</summary>
+  - When the queue is drained, all jobs that are **waiting** or **delayed** are removed.
+  - Jobs that are **active**, **waiting for children**, **completed**, or **failed** remain unaffected.
+  - **Parent jobs** within the drained queue:
+    - Stay in the `waiting-children` status if they have pending children.
+    - Are removed if they do not have any pending children.
+  - **Parent jobs** in different queues:
+    - Remain in `waiting-children` status if they have pending children in other queues.
+    - Are moved to the `wait` status if they do not have pending children in other queues.
 
-- When the queue is drained, all jobs that are **waiting** or **delayed** are removed.
-- Jobs that are **active**, **waiting for children**, **completed**, or **failed** remain unaffected.
-- **Parent jobs** within the drained queue:
-  - Stay in the `waiting-children` status if they have pending children.
-  - Are removed if they do not have any pending children.
-- **Parent jobs** in different queues:
-  - Remain in `waiting-children` status if they have pending children in other queues.
-  - Are moved to the `wait` status if they do not have pending children in other queues.
-
-
-  <ul>
-    <li><strong>With Pending Children in Other Queues:</strong>
-      <ul>
-        <li>Parent jobs will remain in the "waiting-children" status if they have pending children in other queues.</li>
-      </ul>
-    </li>
-
-    <li><strong>Without Pending Children in Other Queues:</strong>
-      <ul>
-        <li>Parent jobs will be moved to the "wait" status if they do not have pending children in other queues.</li>
-      </ul>
-    </li>
-  </ul>
-
+  ```javascript
+  import { Queue } from 'bullmq';
+  
+  const queue = new Queue('paint');
+  
+  await queue.drain();
+  ```
 </details>
 
 
-1. **Draining methods:**
 
-- When the queue is drained, all jobs that are **waiting** or **delayed** are removed.
-- Jobs that are **active**, **waiting for children**, **completed**, or **failed** remain unaffected.
-- **Parent jobs** within the drained queue:
-  - Stay in the `waiting-children` status if they have pending children.
-  - Are removed if they do not have any pending children.
-- **Parent jobs** in different queues:
-  - Remain in `waiting-children` status if they have pending children in other queues.
-  - Are moved to the `wait` status if they do not have pending children in other queues.
 
-```javascript
-import { Queue } from 'bullmq';
 
-const queue = new Queue('paint');
-
-await queue.drain();
-```
 
 
 

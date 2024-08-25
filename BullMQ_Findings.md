@@ -55,6 +55,7 @@ const globalConcurrency = await queue.getGlobalConcurrency();
 ```
 
 ### Removing Jobs
+
 1. #### Drain Method: ####
 
     - When the queue is drained, all jobs that are **waiting** or **delayed** are removed.
@@ -75,7 +76,29 @@ const globalConcurrency = await queue.getGlobalConcurrency();
     
     await queue.drain();
     ```
+2. #### Clean Methos: ###
+     - **Grace Period (60000 ms / 1 minute):**
+    - Jobs older than this period will be considered for removal.
+  
+  - **Max Number of Jobs (1000):**
+    - Maximum number of jobs to clean.
+  
+  - **Job State ('paused'):**
+    - Only jobs in the 'paused' state will be cleaned.
 
+
+   ```javascript
+   import { Queue } from 'bullmq';
+   
+   const queue = new Queue('paint');
+   
+   const deletedJobIds = await queue.clean(
+   60000, // 1 minute
+   1000, // max number of jobs to clean
+   'paused',
+   );
+   ```
+      
 
 
 

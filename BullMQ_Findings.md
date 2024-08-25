@@ -42,3 +42,15 @@ const jobs = await queue.addBulk([
 ]);
 //This call can only succeed or fail, and all or none of the jobs will be added.
 ```
+
+### Global Concurrency
+
+```javascript
+import { Queue } from 'bullmq';
+
+await queue.setGlobalConcurrency(4);
+const globalConcurrency = await queue.getGlobalConcurrency();
+
+// When a concurrency level is chosen for workers, it will not override the global one; instead, it will be set as the maximum number of jobs that can be processed by a given worker in parallel, but never exceeding the global concurrency level.
+```
+

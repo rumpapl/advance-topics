@@ -26,3 +26,19 @@ await myQueue.add(
   }
 );
 ```
+
+### Adding jobs in bulk
+
+```javascript
+import { Queue } from 'bullmq';
+
+const queue = new Queue('paint');
+
+const name = 'jobName';
+const jobs = await queue.addBulk([
+  { name, data: { paint: 'car' } },
+  { name, data: { paint: 'house' } },
+  { name, data: { paint: 'boat' } },
+]);
+//This call can only succeed or fail, and all or none of the jobs will be added.
+```

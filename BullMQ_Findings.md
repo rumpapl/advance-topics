@@ -1,6 +1,9 @@
 # BullMQ
 
 ## Queues
+<details>
+  
+
 
 ### Auto-Removal of Jobs
 
@@ -106,7 +109,7 @@ const globalConcurrency = await queue.getGlobalConcurrency();
    await queue.obliterate();
    ```
 
-
+</details>
 
 
 

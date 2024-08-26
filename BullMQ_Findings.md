@@ -134,6 +134,27 @@ const globalConcurrency = await queue.getGlobalConcurrency();
   - This method waits for all current jobs to be processed or failed.
   - If the shutdown fails or is incomplete, pending jobs will be marked as stalled and can be processed by other workers.
 
+
+  ### Pausing Queues 
+
+  - **Global Queue Pause**: 
+    - Prevents all workers from picking up new jobs from the queue.
+    - Workers currently processing jobs will finish those jobs before idling.
+  
+  - **Global Pause Method**: 
+    - Use `await myQueue.pause();` to pause the queue globally.
+  
+  - **Local Worker Pause**: 
+    - Pauses a specific worker instance locally.
+    - The worker will finish processing current jobs but won't start any new ones.
+  
+  - **Local Pause Method**: 
+    - Use `await myWorker.pause();` to pause a worker locally, waiting for all current jobs to complete (or fail).
+  
+  - **Immediate Pause**: 
+    - To pause a worker immediately without waiting for current jobs to finish, use `await myWorker.pause(true);`.
+
+
 </details>
 
 

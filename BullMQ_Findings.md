@@ -116,18 +116,18 @@ const globalConcurrency = await queue.getGlobalConcurrency();
 
   ### Auto-Removal of Jobs
   ### Concurrency
-  ```javascript
-      import { Worker, Job } from 'bullmq';
-  
-      const worker = new Worker(
-      queueName,
-      async (job: Job) => {
-        // Do something with job
-        return 'some value';
-      },
-      { concurrency: 50 },
-    );
-  ```
+    ```javascript
+        import { Worker, Job } from 'bullmq';
+    
+        const worker = new Worker(
+        queueName,
+        async (job: Job) => {
+          // Do something with job
+          return 'some value';
+        },
+        { concurrency: 50 },
+      );
+    ```
   ### Graceful shutdown
   
   - Use `await worker.close();` to perform a graceful shutdown.

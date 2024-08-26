@@ -130,9 +130,9 @@ const globalConcurrency = await queue.getGlobalConcurrency();
   ```
   ### Graceful shutdown
   
-    - Use `await worker.close();` to perform a graceful shutdown.
-    - This method waits for all current jobs to be processed or failed.
-    - If the shutdown fails or is incomplete, pending jobs will be marked as stalled and can be processed by other workers.
+  - Use `await worker.close();` to perform a graceful shutdown.
+  - This method waits for all current jobs to be processed or failed.
+  - If the shutdown fails or is incomplete, pending jobs will be marked as stalled and can be processed by other workers.
 
 </details>
 

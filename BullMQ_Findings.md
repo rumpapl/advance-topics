@@ -1,8 +1,8 @@
 # BullMQ
 
-## Queues
+
 <details>
-  <summary> ## Queues ## </summary>
+  <summary>Queues</summary>
 
 
 ### Auto-Removal of Jobs

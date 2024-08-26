@@ -111,6 +111,15 @@ const globalConcurrency = await queue.getGlobalConcurrency();
 
 </details>
 
+<details>
+  <summary>Workers</summary>
+
+  ### Auto-Removal of Jobs
+    `same as queue`
+  
+  ### Concurrency
+
+</details>
 
 
 

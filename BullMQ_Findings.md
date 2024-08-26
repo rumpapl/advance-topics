@@ -116,7 +116,7 @@ const globalConcurrency = await queue.getGlobalConcurrency();
 
   ### Auto-Removal of Jobs
   ### Concurrency
-    ```javascript
+  ```javascript
       import { Worker, Job } from 'bullmq';
   
       const worker = new Worker(
@@ -127,6 +127,7 @@ const globalConcurrency = await queue.getGlobalConcurrency();
       },
       { concurrency: 50 },
     );
+  ```
 
 </details>
 

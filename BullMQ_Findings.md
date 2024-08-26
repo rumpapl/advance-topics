@@ -2,7 +2,7 @@
 
 ## Queues
 <details>
-  
+  <summary>Queues</summary>
 
 
 ### Auto-Removal of Jobs

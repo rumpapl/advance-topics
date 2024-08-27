@@ -160,8 +160,7 @@ const globalConcurrency = await queue.getGlobalConcurrency();
 
 
 # Sources & Materials
-[BullMQ - Queues](https://docs.bullmq.io/guide/queues)
-
+[BullMQ - Queues](https://docs.bullmq.io/guide/queues);
 [BullMQ - Workers](https://docs.bullmq.io/guide/workers)
 
 [BullMQ - Jobs](https://docs.bullmq.io/guide/jobs)

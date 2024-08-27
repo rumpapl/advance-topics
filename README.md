@@ -44,7 +44,15 @@
       ```
 
       - This command stops and removes all running containers.
-
-
 </details>
+
+# The Child Processes Module
+
+
+# Resources & Materials
+[Node.js Child Processes: Everything you need to know](https://www.freecodecamp.org/news/node-js-child-processes-everything-you-need-to-know-e69498fe970a/)
+
+[Unleashing Node.js: Mastering the Power of Child Process Forking](https://medium.com/@ashutoshbkd/unleashing-node-js-mastering-the-power-of-child-process-forking-38750f093091)
+
+
 

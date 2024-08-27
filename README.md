@@ -54,16 +54,16 @@
 - Pass arguments to OS commands executed within child processes.
 - Pipe the output of one command as the input to another, leveraging Node.js streams.
 - There are four different ways to create a child process in Node
-   - <details>
+  - <details>
      <summary>spawn()</summary>
    </details>
-   - <details>
+  - <details>
      <summary>fork()</summary>
    </details>
-   - <details>
+  - <details>
      <summary>exec()</summary>
    </details>
-   - <details>
+  - <details>
      <summary>execFile()</summary>
    </details>
 

@@ -1,7 +1,7 @@
 # Setup and Installation
-
-
-1. **Clone the Repository:**
+<details>
+   <summary></summary>
+   1. **Clone the Repository:**
 
    - Download the repository to your local machine using:
 
@@ -44,4 +44,7 @@
       ```
 
       - This command stops and removes all running containers.
+
+
+</details>
 

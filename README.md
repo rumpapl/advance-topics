@@ -1,7 +1,47 @@
-# Advance-topics 
-   - **[Event Loop](https://github.com/rumpapl/advance-topics/tree/event-loop)** - node.js `event loop` with code experiment.
-   - **[Event Emitter](https://github.com/rumpapl/advance-topics/tree/event-emitter)** - node.js `event emitter` with code experiment.
-   - **[Redis: pub/sub](https://github.com/rumpapl/advance-topics/tree/redis-pub-sub)** - Redis `pub/sub protocol` using sample node.js client.
-   - **[News Aggregator App with Redis Caching](https://github.com/rumpapl/advance-topics/tree/redis-cache)** - A backend service designed to fetch and cache news headlines from a public news API.
-   - **[Handling Background Task](https://github.com/rumpapl/advance-topics/tree/cron-with-bullmq)** - `Cron jobs` and `BullMQ` integration with a Koa server.
+# Setup and Installation
+
+
+1. **Clone the Repository:**
+
+   - Download the repository to your local machine using:
+
+     ```bash
+     git clone <repository-url>
+     ```
+
+2. **Switch to the Branch:**
+
+   - Change to the `branch_name` branch:
+
+     ```bash
+     git checkout <branch-name>
+     ```
+3. **Project setup:**
+   - Rename the `.env.dist` as `.env`
+     
+3. **Execute the Following Commands:**
+
+   1. **Install Dependencies:**
+
+      ```bash
+      make install
+      ```
+
+      - This command installs all necessary dependencies for the project.
+
+   2. **Start Containers:**
+
+      ```bash
+      make up
+      ```
+
+      - This command starts all the defined containers.
+
+   3. **Clean Up:**
+
+      ```bash
+      make clean
+      ```
+
+      - This command stops and removes all running containers.
 

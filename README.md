@@ -1,6 +1,6 @@
 # Setup and Installation
 <details>
-   <summary></summary>
+   <summary>Guide</summary>
    1. **Clone the Repository:**
 
    - Download the repository to your local machine using:
@@ -11,10 +11,10 @@
 
 2. **Switch to the Branch:**
 
-   - Change to the `branch_name` branch:
+   - Change to the `child-process` branch:
 
      ```bash
-     git checkout <branch-name>
+     git checkout child-process
      ```
 3. **Project setup:**
    - Rename the `.env.dist` as `.env`

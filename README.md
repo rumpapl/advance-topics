@@ -49,10 +49,10 @@
 # The Child Processes Module
 
 
-# Resources & Materials
+## Resources & Materials
 [Node.js Child Processes: Everything you need to know](https://www.freecodecamp.org/news/node-js-child-processes-everything-you-need-to-know-e69498fe970a/)
 
 [Unleashing Node.js: Mastering the Power of Child Process Forking](https://medium.com/@ashutoshbkd/unleashing-node-js-mastering-the-power-of-child-process-forking-38750f093091)
 
-
+[Node.js Streams: Everything you need to know](https://www.freecodecamp.org/news/node-js-streams-everything-you-need-to-know-c9141306be93/)
 

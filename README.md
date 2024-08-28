@@ -2,51 +2,57 @@
 
 <details>
    <summary>Guide</summary>
-   1. **Clone the Repository:**
 
-- Download the repository to your local machine using:
+1. **Clone the Repository:**
 
-  ```bash
-  git clone <repository-url>
-  ```
+   - Download the repository to your local machine using:
 
-2.  **Switch to the Branch:**
+   ```bash
+   git clone <repository-url>
+   ```
 
-    - Change to the `child-process` branch:
+2. **Switch to the Branch:**
+
+
+      - Change to the `child-process` branch:
 
       ```bash
       git checkout child-process
       ```
 
 3.  **Project setup:**
-    - Rename the `.env.dist` as `.env`
+
+
+      - Rename the `.env.dist` as `.env`
+
 4.  **Execute the Following Commands:**
 
-    1.  **Install Dependencies:**
+1.  **Install Dependencies:**
 
-        ```bash
-        make install
-        ```
+    ```bash
+    make install
+    ```
 
-        - This command installs all necessary dependencies for the project.
 
-    2.  **Start Containers:**
+         - This command installs all necessary dependencies for the project.
 
-        ```bash
-        make up
-        ```
+      2.  **Start Containers:**
 
-        - This command starts all the defined containers.
+         ```bash
+         make up
+         ```
 
-    3.  **Clean Up:**
+         - This command starts all the defined containers.
 
-              ```bash
-              make clean
-              ```
+      3.  **Clean Up:**
 
-              - This command stops and removes all running containers.
+         ```bash
+         make clean
+         ```
 
-        </details>
+         - This command stops and removes all running containers.
+
+</details>
 
 # The Child Processes Module
 

@@ -7,50 +7,50 @@
 
    - Download the repository to your local machine using:
 
-   ```bash
-   git clone <repository-url>
-   ```
+     ```bash
+     git clone <repository-url>
+     ```
 
 2. **Switch to the Branch:**
 
+   - Change to the `child-process` branch:
 
-      - Change to the `child-process` branch:
+     ```bash
+     git checkout child-process
+     ```
 
-      ```bash
-      git checkout child-process
-      ```
+3. **Project setup:**
 
-3.  **Project setup:**
-
-
-      - Rename the `.env.dist` as `.env`
+- Rename the `.env.dist` as `.env`
 
 4.  **Execute the Following Commands:**
 
 1.  **Install Dependencies:**
 
+
     ```bash
     make install
     ```
 
+- This command installs all necessary dependencies for the project.
 
-         - This command installs all necessary dependencies for the project.
+2.  **Start Containers:**
 
-      2.  **Start Containers:**
+    ```bash
+    make up
+    ```
 
-         ```bash
-         make up
-         ```
 
-         - This command starts all the defined containers.
+      - This command starts all the defined containers.
 
-      3.  **Clean Up:**
+3.  **Clean Up:**
 
-         ```bash
-         make clean
-         ```
+    ```bash
+    make clean
+    ```
 
-         - This command stops and removes all running containers.
+
+      - This command stops and removes all running containers.
 
 </details>
 

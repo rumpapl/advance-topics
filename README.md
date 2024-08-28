@@ -21,36 +21,32 @@
 
 3. **Project setup:**
 
-- Rename the `.env.dist` as `.env`
+   - Rename the `.env.dist` as `.env`
 
 4.  **Execute the Following Commands:**
 
-1.  **Install Dependencies:**
+   1.  **Install Dependencies:**
+   
+       ```bash
+       make install
+       ```
+   
+   - This command installs all necessary dependencies for the project.
 
+   2.  **Start Containers:**
+   
+       ```bash
+       make up
+       ```
+       
+   - This command starts all the defined containers.
 
-    ```bash
-    make install
-    ```
-
-- This command installs all necessary dependencies for the project.
-
-2.  **Start Containers:**
-
-    ```bash
-    make up
-    ```
-
-
-      - This command starts all the defined containers.
-
-3.  **Clean Up:**
-
-    ```bash
-    make clean
-    ```
-
-
-      - This command stops and removes all running containers.
+   3.  **Clean Up:**
+   
+       ```bash
+       make clean
+       ```
+   - This command stops and removes all running containers.
 
 </details>
 

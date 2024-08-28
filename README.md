@@ -1,50 +1,52 @@
 # Setup and Installation
+
 <details>
    <summary>Guide</summary>
    1. **Clone the Repository:**
 
-   - Download the repository to your local machine using:
+- Download the repository to your local machine using:
 
-     ```bash
-     git clone <repository-url>
-     ```
+  ```bash
+  git clone <repository-url>
+  ```
 
-2. **Switch to the Branch:**
+2.  **Switch to the Branch:**
 
-   - Change to the `child-process` branch:
-
-     ```bash
-     git checkout child-process
-     ```
-3. **Project setup:**
-   - Rename the `.env.dist` as `.env`
-     
-3. **Execute the Following Commands:**
-
-   1. **Install Dependencies:**
+    - Change to the `child-process` branch:
 
       ```bash
-      make install
+      git checkout child-process
       ```
 
-      - This command installs all necessary dependencies for the project.
+3.  **Project setup:**
+    - Rename the `.env.dist` as `.env`
+4.  **Execute the Following Commands:**
 
-   2. **Start Containers:**
+    1.  **Install Dependencies:**
 
-      ```bash
-      make up
-      ```
+        ```bash
+        make install
+        ```
 
-      - This command starts all the defined containers.
+        - This command installs all necessary dependencies for the project.
 
-   3. **Clean Up:**
+    2.  **Start Containers:**
 
-      ```bash
-      make clean
-      ```
+        ```bash
+        make up
+        ```
 
-      - This command stops and removes all running containers.
-</details>
+        - This command starts all the defined containers.
+
+    3.  **Clean Up:**
+
+              ```bash
+              make clean
+              ```
+
+              - This command stops and removes all running containers.
+
+        </details>
 
 # The Child Processes Module
 
@@ -53,7 +55,7 @@
 - Control and manipulate the input and output streams of child processes.
 - Pass arguments to OS commands executed within child processes.
 - Pipe the output of one command as the input to another, leveraging Node.js streams.
-- There are four different ways to create a child process in Node
+<!-- - There are four different ways to create a child process in Node
 <details>
    <summary>spawn()</summary>
 </details>
@@ -65,13 +67,12 @@
 </details>
 <details>
    <summary>execFile()</summary>
-</details>
-
+</details> -->
 
 ## Resources & Materials
+
 [Unleashing Node.js: Mastering the Power of Child Process Forking](https://medium.com/@ashutoshbkd/unleashing-node-js-mastering-the-power-of-child-process-forking-38750f093091)
 
 [Node.js Child Processes: Everything you need to know](https://www.freecodecamp.org/news/node-js-child-processes-everything-you-need-to-know-e69498fe970a/)
 
 [Node.js Streams: Everything you need to know](https://www.freecodecamp.org/news/node-js-streams-everything-you-need-to-know-c9141306be93/)
-

@@ -1,1 +1,1 @@
-console.log("Initial Project Setup.");
+require("./src/parent");

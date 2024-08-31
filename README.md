@@ -75,7 +75,6 @@
    <summary> `child_process` Module Methods: Pros and Cons</summary>
    
    ### 1. `spawn()`
-   
    **Pros:**
    - Efficient for large data output as it uses streams, avoiding memory overhead.
    - Doesn't create a shell, making it more secure and faster for simple commands.
@@ -84,22 +83,8 @@
    **Cons:**
    - More complex syntax when shell features (like pipes) are needed.
    - Requires handling streams manually.
-</details>
-
-
-## `child_process` Module Methods: Pros and Cons
-
-### 1. `spawn()`
-   **Pros:**
-   - Efficient for large data output as it uses streams, avoiding memory overhead.
-   - Doesn't create a shell, making it more secure and faster for simple commands.
-   - Can handle real-time output processing.
    
-   **Cons:**
-   - More complex syntax when shell features (like pipes) are needed.
-   - Requires handling streams manually.
-
-### 2. `exec()`
+   ### 2. `exec()`
    **Pros:**
    - Simple syntax, allowing the use of shell commands and features (like pipes).
    - Outputs the full command result via a callback, making it easy to work with small data.
@@ -108,27 +93,27 @@
    - Buffers the entire output in memory, leading to potential memory issues with large data.
    - Slower and less efficient for large outputs compared to `spawn()`.
 
-### 3. `execFile()`
-**Pros:**
-- More secure than `exec()` as it doesn’t execute within a shell.
-- Slightly more efficient since it skips the shell invocation.
-- Ideal for executing binary files directly.
+   ### 3. `execFile()`
+   **Pros:**
+   - More secure than `exec()` as it doesn’t execute within a shell.
+   - Slightly more efficient since it skips the shell invocation.
+   - Ideal for executing binary files directly.
+   
+   **Cons:**
+   - Lacks support for shell features (e.g., pipes), limiting its flexibility.
+   - Not suitable for commands that require shell syntax.
 
-**Cons:**
-- Lacks support for shell features (e.g., pipes), limiting its flexibility.
-- Not suitable for commands that require shell syntax.
-
-### 4. `fork()`
-**Pros:**
-- Specifically designed for spawning Node.js processes, enabling inter-process communication (IPC).
-- Efficient for distributing workload across multiple processes, useful in scaling applications.
-- Simplifies message passing between parent and child processes.
-
-**Cons:**
-- Only works with Node.js scripts, not arbitrary system commands.
-- Can increase complexity when managing multiple child processes.
-- Limited by the number of processes that can be forked due to system resources.
-
+   ### 4. `fork()`
+   **Pros:**
+   - Specifically designed for spawning Node.js processes, enabling inter-process communication (IPC).
+   - Efficient for distributing workload across multiple processes, useful in scaling applications.
+   - Simplifies message passing between parent and child processes.
+   
+   **Cons:**
+   - Only works with Node.js scripts, not arbitrary system commands.
+   - Can increase complexity when managing multiple child processes.
+   - Limited by the number of processes that can be forked due to system resources.
+</details>
 
 ## Resources & Materials
 

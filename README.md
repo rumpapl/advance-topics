@@ -73,7 +73,9 @@
 
 <details>
    <summary> `child_process` Module Methods: Pros and Cons</summary>
+   
    ### 1. `spawn()`
+   
    **Pros:**
    - Efficient for large data output as it uses streams, avoiding memory overhead.
    - Doesn't create a shell, making it more secure and faster for simple commands.

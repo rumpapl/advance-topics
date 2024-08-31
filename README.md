@@ -57,20 +57,7 @@
 - Control and manipulate the input and output streams of child processes.
 - Pass arguments to OS commands executed within child processes.
 - Pipe the output of one command as the input to another, leveraging Node.js streams.
-<!-- - There are four different ways to create a child process in Node
-<details>
-   <summary>spawn()</summary>
-</details>
-<details>
-   <summary>fork()</summary>
-</details>
-<details>
-   <summary>exec()</summary>
-</details>
-<details>
-   <summary>execFile()</summary>
-</details> -->
-
+- There are four different ways to create a child process in Node
 -   <details>
       <summary>Methods: Pros and Cons</summary>
       

@@ -71,26 +71,26 @@
    <summary>execFile()</summary>
 </details> -->
 
-## Node.js `child_process` Module Methods: Pros and Cons
+## `child_process` Module Methods: Pros and Cons
 
 ### 1. `spawn()`
-**Pros:**
-- Efficient for large data output as it uses streams, avoiding memory overhead.
-- Doesn't create a shell, making it more secure and faster for simple commands.
-- Can handle real-time output processing.
-
-**Cons:**
-- More complex syntax when shell features (like pipes) are needed.
-- Requires handling streams manually.
+   **Pros:**
+   - Efficient for large data output as it uses streams, avoiding memory overhead.
+   - Doesn't create a shell, making it more secure and faster for simple commands.
+   - Can handle real-time output processing.
+   
+   **Cons:**
+   - More complex syntax when shell features (like pipes) are needed.
+   - Requires handling streams manually.
 
 ### 2. `exec()`
-**Pros:**
-- Simple syntax, allowing the use of shell commands and features (like pipes).
-- Outputs the full command result via a callback, making it easy to work with small data.
-
-**Cons:**
-- Buffers the entire output in memory, leading to potential memory issues with large data.
-- Slower and less efficient for large outputs compared to `spawn()`.
+   **Pros:**
+   - Simple syntax, allowing the use of shell commands and features (like pipes).
+   - Outputs the full command result via a callback, making it easy to work with small data.
+   
+   **Cons:**
+   - Buffers the entire output in memory, leading to potential memory issues with large data.
+   - Slower and less efficient for large outputs compared to `spawn()`.
 
 ### 3. `execFile()`
 **Pros:**

@@ -59,7 +59,7 @@
 - Pipe the output of one command as the input to another, leveraging Node.js streams.
 - There are four different methods to create a child process in Node.
 -   <details>
-      <summary>Methods with Pros and Cons</summary>
+      <summary>Methods </summary>
       
       1. `spawn()`
          - Efficient for large data output as it uses streams, avoiding memory overhead.

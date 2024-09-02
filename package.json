@@ -1,0 +1,13 @@
+{
+  "name": "email-service",
+  "version": "1.0.0",
+  "description": "sent email using background tech",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

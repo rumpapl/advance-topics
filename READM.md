@@ -1,6 +1,5 @@
 # Setup and Installation
 
-
 1. **Clone the Repository:**
 
    - Download the repository to your local machine using:
@@ -11,15 +10,15 @@
 
 2. **Switch to the Branch:**
 
-   - Change to the `branch_name` branch:
+   - Change to the `email-service` branch:
 
      ```bash
-     git checkout <branch-name>
+     git checkout email-service
      ```
+
 3. **Project setup:**
    - Rename the `.env.dist` as `.env`
-     
-3. **Execute the Following Commands:**
+4. **Execute the Following Commands:**
 
    1. **Install Dependencies:**
 
@@ -44,4 +43,3 @@
       ```
 
       - This command stops and removes all running containers.
-

@@ -43,3 +43,13 @@
       ```
 
       - This command stops and removes all running containers.
+
+### Resources
+
+#### Cron
+
+[node-cron](https://www.npmjs.com/package/node-cron)
+
+[cron-time-generator](https://www.npmjs.com/package/cron-time-generator)
+
+[crontab guru](https://crontab.guru/)

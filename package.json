@@ -6,8 +6,20 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/nodemon index.js"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "@koa/bodyparser": "^5.1.1",
+    "@koa/router": "^13.0.0",
+    "bullmq": "^5.12.12",
+    "cron-time-generator": "^2.0.3",
+    "ioredis": "^5.4.1",
+    "koa": "^2.15.3",
+    "mongodb": "^6.9.0",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
 }

@@ -5,4 +5,4 @@
    - **[News Aggregator App with Redis Caching](https://github.com/rumpapl/advance-topics/tree/redis-cache)** - A backend service designed to fetch and cache news headlines from a public news API.
    - **[Inter-Process Communication with Child Process](https://github.com/rumpapl/advance-topics/tree/child-process)** - node.js `Child Process` with code experiment.
    - **[Handling Background Task](https://github.com/rumpapl/advance-topics/tree/cron-with-bullmq)** - `Cron jobs` and `BullMQ` integration with a Koa server.
-   - **[Email Service App](https://github.com/rumpapl/advance-topics/tree/email-service)** - `Cron jobs` and `BullMQ` integration with a Koa server.
+   - **[Email Service App](https://github.com/rumpapl/advance-topics/tree/email-service-app)** - `Cron jobs` and `BullMQ` integration with a Koa server.

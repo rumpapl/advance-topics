@@ -1,5 +1,8 @@
 # Setup and Installation
 
+<details>
+   <summary>Guide</summary>
+
 1. **Clone the Repository:**
 
    - Download the repository to your local machine using:
@@ -17,7 +20,9 @@
      ```
 
 3. **Project setup:**
+
    - Rename the `.env.dist` as `.env`
+
 4. **Execute the Following Commands:**
 
    1. **Install Dependencies:**
@@ -26,7 +31,7 @@
       make install
       ```
 
-      - This command installs all necessary dependencies for the project.
+   - This command installs all necessary dependencies for the project.
 
    2. **Start Containers:**
 
@@ -34,7 +39,7 @@
       make up
       ```
 
-      - This command starts all the defined containers.
+   - This command starts all the defined containers.
 
    3. **Clean Up:**
 
@@ -42,11 +47,11 @@
       make clean
       ```
 
-      - This command stops and removes all running containers.
+   - This command stops and removes all running containers.
 
-### Resources
+</details>
 
-#### Cron
+## Resources & Materials
 
 [node-cron](https://www.npmjs.com/package/node-cron)
 

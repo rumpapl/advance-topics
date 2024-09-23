@@ -13,7 +13,7 @@
 
 2. **Switch to the Branch:**
 
-   - Change to the `email-service-ap` branch:
+   - Change to the `email-service-app` branch:
 
      ```bash
      git checkout email-service-app

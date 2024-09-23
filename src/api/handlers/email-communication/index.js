@@ -18,7 +18,11 @@ router.post("/email-communication", async (ctx, next) => {
 });
 
 router.get("/email-communication/:task_id", async (ctx, next) => {
-  const task_id = ctx.params.task_id;
+  const task_id = Number(ctx.params.task_id);
+  if (isNaN(task_id)) {
+    ctx.body = { status: 400, message: "Invalid ID" };
+    return await next();
+  }
 
   const res = await getJobById(EMAIL_QUEUE, task_id);
 
@@ -36,7 +40,12 @@ router.get("/users-log", async (ctx, next) => {
 });
 
 router.get("/user-log/:user_id", async (ctx, next) => {
-  const user_id = ctx.params.user_id;
+  const user_id = Number(ctx.params.user_id);
+
+  if (isNaN(user_id)) {
+    ctx.body = { status: 400, message: "Invalid User ID" };
+    return await next();
+  }
 
   const res = await User.fetchUserlog(user_id);
 

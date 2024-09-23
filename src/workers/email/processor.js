@@ -21,6 +21,7 @@ module.exports = async (data) => {
   }
 
   const formatData = { ...data?.data, message };
+
   await User.addInfo(formatData);
 
   return formatData;

@@ -1,4 +1,4 @@
 const helloWorld = require("./jobs/hello-world");
-const downloadUserLogs = require("./jobs/download-user-logs");
+const SaveUserLog = require("./jobs/save-user-log");
 
-module.exports = [helloWorld, downloadUserLogs];
+module.exports = [helloWorld, SaveUserLog];

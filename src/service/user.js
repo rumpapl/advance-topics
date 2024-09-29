@@ -7,15 +7,15 @@ const addInfo = async (data) => {
 
   return await db
     .collection(USER_LOG_COLLECTION_NAME)
-    .insertOne({ ...data, created_at: new Date() });
+    .insertOne({ ...data, createdAt: new Date() });
 };
 
-const fetchUserlog = async (user_id) => {
+const fetchUserlog = async (userId) => {
   const db = await getDatabase();
 
   return await db
     .collection(USER_LOG_COLLECTION_NAME)
-    .find({ user_id })
+    .find({ userId })
     .toArray();
 };
 
@@ -25,13 +25,13 @@ const fetchUserslog = async () => {
   return await db.collection(USER_LOG_COLLECTION_NAME).find().toArray();
 };
 
-const fetchUserlogBasedOnTime = async (durationInMilliSecond = 0) => {
+const fetchUserlogBasedOnTimeDuration = async (durationInMilliSecond = 0) => {
   const db = await getDatabase();
 
   return await db
     .collection(USER_LOG_COLLECTION_NAME)
     .find({
-      created_at: {
+      createdAt: {
         $gte: new Date(Date.now() - durationInMilliSecond),
       },
     })
@@ -42,5 +42,5 @@ module.exports = {
   addInfo,
   fetchUserlog,
   fetchUserslog,
-  fetchUserlogBasedOnTime,
+  fetchUserlogBasedOnTimeDuration,
 };

@@ -6,3 +6,5 @@
    - **[Inter-Process Communication with Child Process](https://github.com/rumpapl/advance-topics/tree/child-process)** - node.js `Child Process` with code experiment.
    - **[Handling Background Task](https://github.com/rumpapl/advance-topics/tree/cron-with-bullmq)** - `Cron jobs` and `BullMQ` integration with a Koa server.
    - **[Email Service App](https://github.com/rumpapl/advance-topics/tree/email-service-app)** - A backend service designed to send emails to users and trace user logs using `Cron jobs` and `BullMQ` integration.
+     
+   - **[Linux Basic Commands](https://github.com/rumpapl/advance-topics/tree/linux-basic-cmd)** - A brief study about `Linux Basic CMD`.

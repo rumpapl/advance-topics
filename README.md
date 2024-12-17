@@ -8,3 +8,5 @@
    - **[Email Service App](https://github.com/rumpapl/advance-topics/tree/email-service-app)** - A backend service designed to send emails to users and trace user logs using `Cron jobs` and `BullMQ` integration.
      
    - **[Linux Basic Commands](https://github.com/rumpapl/advance-topics/tree/linux-basic-cmd)** - A brief study about `Linux Basic CMD`.
+   - **[Node.js project Setup on Remote Server Steps](https://github.com/rumpapl/advance-topics/tree/setup-project-production)** - Instructions about Node.js project setup on remote server.
+     

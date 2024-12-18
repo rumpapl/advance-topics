@@ -60,6 +60,15 @@
       - inspect app details using `pm2 describe app_name`
       - monitor the app using `pm2 monit`
       - we can also load `.env` file while runing app using pm2. need to google how to load .env with pm2 for further information.
+   - pm2 to integrate with systemd
+      - generate a systemd unit file for PM2 using `pm2 startup systemd`
+      - above command generates a script to register PM2 with systemd. Copy the output and execute that
+      - save pm2 processes using `pm2 save`
+      - enable pm2 in systmed using `sudo systemctl enable pm2-<username>`
+      - start at boot using `sudo systemctl start pm2-<username>`
+      - check status using `sudo systemctl status pm2-<username>`
+      
+
 
    
 

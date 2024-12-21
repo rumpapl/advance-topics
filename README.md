@@ -7,10 +7,10 @@
    - Now back to the local machine terminal and using `cmd` : `ssh user_name@IP_Address` check the connection. If remote machine terminal open then connect is ready to use.
 
 - install git 
-- clone the repository on remote server using `cmd` : `git clone ssh_link_from_github`. Here you may need to set SSH connect with github if not set before. If need to setup SSH connect, follow the instuctions:
+- clone the repository on remote server using `cmd` : `git clone ssh_url_from_github`. Here you may need to set SSH connect with github if not set before. If need to setup SSH connect, follow the instuctions:
    - create new `SSH` key-pair using `cmd` : `ssh-keygen -t rsa -b 4096`
    - copy pub key from remote server using `cmd` : `cat ~/.ssh/id_rsa.pub`
-   - add New SSH key in github repository
+   - add New SSH key in github repository as `deploy key`
     - if the connect successfully stablished, you can clone the targeted reposigoty.
 
 - for Production Deployments we should clone the project under `/opt` folder. Navigate into the folder and clone the project.

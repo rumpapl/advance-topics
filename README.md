@@ -55,7 +55,9 @@
    - Test application:
       - to generate seed run the following cmd from projet root  `node src/scripts/database/index.js`
       - run the project usig `npm start` to check project setup successfully
-   - install pm2 using `npm install -g pm2`
+
+   - **setup pm2**:
+      - install pm2 using `npm install -g pm2`
       - varify the instalation using `pm2 --version`
       - navigate to the directory where Node.js app is located and run `pm2 start index.js --name app_name`
       - varify the running process using `pm2 list`
@@ -87,13 +89,61 @@
                ```
             - use PM2 to start the application using `pm2 start ecosystem.config.js`
 
-   - pm2 to integrate with systemd
+   - **pm2 to integrate with systemd**
       - generate a systemd unit file for PM2 using `pm2 startup systemd`
       - above command generates a script to register PM2 with systemd. Copy the output and execute that
       - save pm2 processes using `pm2 save`
       - enable pm2 in systmed using `sudo systemctl enable pm2-<username>`
       - start at boot using `sudo systemctl start pm2-<username>`
       - check status using `sudo systemctl status pm2-<username>`
+
+   - **setup `INGINX`**
+      - install nginx using 
+         ```
+         sudo apt update
+         sudo apt install nginx
+         ```
+      - start Nginx and enable it to run on system boot using 
+         ```
+         sudo systemctl start nginx
+         sudo systemctl enable nginx
+         ```
+      - edit nginx configuration
+         - open a new configuration file for app using `sudo nano /etc/nginx/sites-available/my-node-app`
+         - set Up the `Upstream` and `Server Block`
+            ```
+            upstream node_app {
+               server 127.0.0.1:3000; # Replace 3000 with your Node.js app port
+            }
+
+            server {
+               listen 80;
+               server_name yourdomain.com www.yourdomain.com; # Replace with your domain or IP
+
+               location / {
+                  proxy_pass http://node_app;
+                  proxy_http_version 1.1;
+                  proxy_set_header Upgrade $http_upgrade;
+                  proxy_set_header Connection 'upgrade';
+                  proxy_set_header Host $host;
+                  proxy_cache_bypass $http_upgrade;
+               }
+            }
+            ```
+         - for enabling the configuration link the configuration file to the sites-enabled directory using `sudo ln -s /etc/nginx/sites-available/my-node-app /etc/nginx/sites-enabled/`
+         - verify the configuration syntax using `sudo nginx -t`
+         - if successful, the following message return
+            ```
+            nginx: configuration file /etc/nginx/nginx.conf test is successful
+            ```
+         - reload nginx for applying the configuration using `sudo systemctl reload nginx`
+         - test the setup: access the application through the domain or IP configured in Nginx `http://yourdomain.com`
+
+      
+
+
+
+
       
 
 

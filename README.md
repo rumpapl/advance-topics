@@ -5,6 +5,7 @@
    - copy pub key from local machine using `cat ~/.ssh/id_rsa.pub`
    - open `authorized_keys` file on remote server and paste the value on the file. Using `nano ~/.ssh/authorized_keys` open the file and paste value if not already exist. 
    - Now back to the local machine terminal and using `ssh user_name@IP_Address` check the connection. If remote machine terminal open then connect is ready to use.
+   - Resources: [SSH Essentials: Working with SSH Servers, Clients, and Keys](https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys#how-to-use-this-guide), [SSH under the hood](https://medium.com/@gerrcass/ssh-under-the-hood-498ff6b740be), [How SSH works, under the hood](https://dx13.co.uk/articles/2024/06/17/how-ssh-works/)
 
 - install git 
 - clone the repository on remote server using `git clone ssh_url_from_github`. Here you may need to set SSH connect with github if not set before. If need to setup SSH connect, follow the instuctions:
@@ -13,11 +14,9 @@
    - add New SSH key in github repository as `deploy key`
     - if the connect successfully stablished, you can clone the targeted reposigoty.
 
-- for Production Deployments we should clone the project under `/opt` folder. Navigate into the folder and clone the project.
+- for Production Deployments we should clone the project under loged in user's home directory.
    ```
-   sudo mkdir -p /opt/myproject
-   sudo chown $USER:$USER /opt/myproject
-   cd /opt/myproject
+   cd ~
    git clone <repository-URL>
    ```
 -  install node and other dependencies (mongo and redis).

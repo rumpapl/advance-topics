@@ -16,8 +16,6 @@
      ```bash
      git checkout <branch-name>
      ```
-3. **Project setup:**
-   - Rename the `.env.dist` as `.env`
      
 3. **Execute the Following Commands:**
 
